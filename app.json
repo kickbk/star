@@ -15,17 +15,28 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
+    "assetBundlePatterns": ["**/*"],
+    "plugins": [
+      [
+        "./plugins/withStarPrinter.js",
+        {
+          "minSdkVersion": 23,
+          "bluetoothAlwaysPermission": "My permission description",
+          "bluetoothPeripheralPermission": "My permission description",
+          "localNetworkUsagePermission": "My other permission description"
+        }
+      ]
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.kickbk.star"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.kickbk.star"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"

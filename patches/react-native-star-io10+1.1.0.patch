@@ -1,0 +1,16 @@
+diff --git a/node_modules/react-native-star-io10/android/src/main/java/com/stario10module/StarIO10ValueConverter.kt b/node_modules/react-native-star-io10/android/src/main/java/com/stario10module/StarIO10ValueConverter.kt
+index a61484f..5f9924c 100644
+--- a/node_modules/react-native-star-io10/android/src/main/java/com/stario10module/StarIO10ValueConverter.kt
++++ b/node_modules/react-native-star-io10/android/src/main/java/com/stario10module/StarIO10ValueConverter.kt
+@@ -728,9 +728,9 @@ class StarIO10ValueConverter {
+                 val client = OkHttpClient()
+                 val request = Request.Builder().url(uri).build()
+                 val response = client.newCall(request).execute()
+-                response.body?.bytes()?.let { responseBytes ->
++                response.body()?.bytes()?.let { responseBytes ->
+                     bytes = responseBytes.toList()
+-                    response.body?.close()
++                    response.body()?.close()
+                 }
+             } catch (e: Exception){}
+ 
