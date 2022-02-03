@@ -22,7 +22,6 @@
         {
           "minSdkVersion": 23,
           "bluetoothAlwaysPermission": "My permission description",
-          "bluetoothPeripheralPermission": "My permission description",
           "localNetworkUsagePermission": "My other permission description"
         }
       ]
